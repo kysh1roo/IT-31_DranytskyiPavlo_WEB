@@ -1,0 +1,18 @@
+<div class="page">
+  <h1>Список фільмів</h1>
+
+  <div class="movie-list">
+    @for (movie of movies; track movie.id) {
+      <div class="movie">
+        <h2>{{ movie.title }}</h2>
+
+        <p>Рік: {{ movie.year }}</p>
+        <p>Рейтинг: {{ movie.rating }}/10</p>
+
+        <a [routerLink]="['/movie', movie.id]">
+          Переглянути деталі
+        </a>
+      </div>
+    }
+  </div>
+</div>
